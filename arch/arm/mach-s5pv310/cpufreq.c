@@ -1386,6 +1386,12 @@ static int s5pv310_target(struct cpufreq_policy *policy,
 		if (old_index > L3)
 			old_index = L3;
 	}
+	/* prevent freqs going above max policy - netarchy */
+	if (s5pv310_freq_table[index].frequency > policy->max) {
+		while (s5pv310_freq_table[index].frequency > policy-> max) {
+			index += 1;
+		}
+	}
 
 	freqs.new = s5pv310_freq_table[index].frequency;
 	freqs.cpu = policy->cpu;
