@@ -14,11 +14,15 @@
  * This should be same with cpufreq_frequency_table
 */
 enum cpufreq_level_request{
-	CPU_L0,		/* 1.2GHz */
-	CPU_L1, 	/* 1GHz */
-	CPU_L2, 	/* 800MHz */
-	CPU_L3, 	/* 500MHz */
-	CPU_L4, 	/* 200MHz */
+	CPU_L0,		/* 1.6GHz */
+	CPU_L1, 	/* 1.44GHz */
+	CPU_L2, 	/* 1.24GHz */
+	CPU_L3, 	/* 1.1GHz */
+	CPU_L4, 	/* 1GHz */
+	CPU_L5, 	/* 800MHz */
+	CPU_L6, 	/* 600MHz */
+	CPU_L7, 	/* 400MHz */
+	CPU_L8, 	/* 150MHz */
 	CPU_LEVEL_END,
 };
 
