@@ -2,7 +2,7 @@
 
 # Set Default Path
 TOP_DIR=$PWD
-KERNEL_PATH=/home/legend/android/kernel/XCeLL-V69-2
+KERNEL_PATH=/home/legend/android/kernel/GT-I9100_Kernel
 
 # TODO: Set toolchain and root filesystem path
 TAR_NAME=zImage.tar
