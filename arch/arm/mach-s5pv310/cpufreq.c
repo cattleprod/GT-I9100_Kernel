@@ -689,7 +689,7 @@ static struct cpufreq_voltage_table s5pv310_lookup_volt_table[] = {
 		.int_volt	= 1100000,
 	}, {
 		.index		= L1,
-		.arm_volt	= 1200000,
+		.arm_volt	= 1250000,
 		.int_volt	= 1100000,
 	}, {
 		.index		= L2,
@@ -701,15 +701,15 @@ static struct cpufreq_voltage_table s5pv310_lookup_volt_table[] = {
 		.int_volt	= 1100000,
 	}, {
 		.index		= L4,
-		.arm_volt	= 1000000,
+		.arm_volt	= 1050000,
 		.int_volt	= 1000000,
 	}, {
 		.index		= L5,
-		.arm_volt	= 950000,
+		.arm_volt	= 975000,
 		.int_volt	= 1000000,
 	}, {
 		.index		= L6,
-		.arm_volt	= 925000,
+		.arm_volt	= 950000,
 		.int_volt	= 1000000,
 	}, {
 		.index		= L7,
@@ -753,7 +753,7 @@ static struct cpufreq_voltage_table s5pv310_volt_table[CPUFREQ_LEVEL_END] = {
 		.int_volt	= 1100000,
 	}, {
 		.index		= L1,
-		.arm_volt	= 1200000,
+		.arm_volt	= 1250000,
 		.int_volt	= 1100000,
 	}, {
 		.index		= L2,
@@ -765,15 +765,15 @@ static struct cpufreq_voltage_table s5pv310_volt_table[CPUFREQ_LEVEL_END] = {
 		.int_volt	= 1100000,
 	}, {
 		.index		= L4,
-		.arm_volt	= 1000000,
+		.arm_volt	= 1050000,
 		.int_volt	= 1000000,
 	}, {
 		.index		= L5,
-		.arm_volt	= 950000,
+		.arm_volt	= 975000,
 		.int_volt	= 1000000,
 	}, {
 		.index		= L6,
-		.arm_volt	= 925000,
+		.arm_volt	= 950000,
 		.int_volt	= 1000000,
 	}, {
 		.index		= L7,
@@ -789,7 +789,7 @@ static struct cpufreq_voltage_table s5pv310_volt_table[CPUFREQ_LEVEL_END] = {
 		.int_volt	= 1100000,
 	}, {
 		.index		= L1,
-		.arm_volt	= 1200000,
+		.arm_volt	= 1250000,
 		.int_volt	= 1100000,
 	}, {
 		.index		= L2,
@@ -801,15 +801,15 @@ static struct cpufreq_voltage_table s5pv310_volt_table[CPUFREQ_LEVEL_END] = {
 		.int_volt	= 1100000,
 	}, {
 		.index		= L4,
-		.arm_volt	= 1000000,
+		.arm_volt	= 1050000,
 		.int_volt	= 1000000,
 	}, {
 		.index		= L5,
-		.arm_volt	= 950000,
+		.arm_volt	= 975000,
 		.int_volt	= 1000000,
 	}, {
 		.index		= L6,
-		.arm_volt	= 925000,
+		.arm_volt	= 950000,
 		.int_volt	= 1000000,
 	}, {
 		.index		= L7,
@@ -1690,7 +1690,7 @@ int s5pv310_cpufreq_lock(unsigned int nId,
 			cpufreq_level -= 1;
 		} else {
 			printk(KERN_WARNING
-				"[CPUFREQ]cpufreq lock to 1GHz in place of 1.2GHz\n");
+				"[CPUFREQ]cpufreq lock to 1GHz in place of 1.24GHz\n");
 		}
 	}
 
@@ -2434,8 +2434,8 @@ static int s5pv310_asv_table_update(void)
 			break;
 		}
 
-		if (s5pv310_busfreq_table[i].volt < 950000)
-			s5pv310_busfreq_table[i].volt = 950000;
+		if (s5pv310_busfreq_table[i].volt < 900000)
+			s5pv310_busfreq_table[i].volt = 900000;
 
 		printk(KERN_INFO "ASV busfreq_table[%d].volt = %d\n",
 			i, s5pv310_busfreq_table[i].volt);
