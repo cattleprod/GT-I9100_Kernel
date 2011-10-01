@@ -149,11 +149,7 @@ extern unsigned long nr_iowait(void);
 extern unsigned long nr_iowait_cpu(int cpu);
 extern unsigned long this_cpu_load(void);
 
-#ifndef CONFIG_SCHED_BFS
-extern void calc_global_load(void);
-#else
 extern void calc_global_load(unsigned long ticks);
-#endif
 
 extern unsigned long get_parent_ip(unsigned long addr);
 
