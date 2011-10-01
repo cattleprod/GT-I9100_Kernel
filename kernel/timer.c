@@ -1308,7 +1308,11 @@ void do_timer(unsigned long ticks)
 {
 	jiffies_64 += ticks;
 	update_wall_time();
+#ifndef CONFIG_SCHED_BFS
 	calc_global_load();
+#else
+	calc_global_load(ticks);
+#endif
 }
 
 #ifdef __ARCH_WANT_SYS_ALARM
